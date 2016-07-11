@@ -1,15 +1,19 @@
 var myApp = angular.module('myApp', [
-	'ngRoute', 
-	'myControllers'
+  'ngRoute',
+  'artistControllers'
 ]);
 
 myApp.config(['$routeProvider', function($routeProvider) {
-	$routeProvider.
-	when('/home', {
-		templateUrl: 'partials/home.html',
-		controller: 'homeController'
-	}).
-	otherwise({
-		redirectTo: '/home'
-	});
-}])
+  $routeProvider.
+  when('/list', {
+    templateUrl: 'partials/list.html',
+    controller: 'ListController'
+  }).
+  when('/details/:itemId', {
+    templateUrl: 'partials/details.html',
+    controller: 'DetailsController'
+  }).
+  otherwise({
+    redirectTo: '/list'
+  });
+}]);
