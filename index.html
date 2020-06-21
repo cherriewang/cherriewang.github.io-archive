@@ -95,6 +95,16 @@
 		  dots[slideIndex-1].className += " active";
 		  captionText.innerHTML = dots[slideIndex-1].alt;
 		}
+
+		function changeSketchbook(){
+			document.getElementById("caption");
+			var imagesNames = new Array(6);
+			for(var i = 0; i < imagesNames.length; i++){
+			  imagesNames[i]=('sketchbook-' + (i + 1)); 
+			}
+			console.log(imagesNames);
+
+		}
 	</script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
@@ -276,12 +286,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					</div>
 					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 						<div class="col-md-12">
-							<p class="work-menu"><span><a href="#" class="active">Observations & Sketches</a></span> <span><a href="#">Life Drawing</a></span> <span><a href="#">Illustrations</a></span> <span><a href="#">Silly Scribbles</a></span></p>
+							<p class="work-menu"><span><a href="#" class="active">Observations & Sketches</a></span> <span><a href="#" onclick="changeSketchbook()">Life Drawing</a></span> <span><a href="#">Illustrations</a></span> <span><a href="#">Silly Scribbles</a></span></p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/img-1.jpg);" onclick="openModal();currentSlide(1)">
+							<div id="sketchbook-1" class="project" style="background-image: url(images/img-1.jpg);" onclick="openModal();currentSlide(1)">
 								<div class="desc">
 									<div class="con">
 										<h3><a href="work.html">Gesture Drawing</a></h3>
@@ -291,7 +301,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							</div>
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="project" style="background-image: url(images/img-2.jpg);" onclick="openModal();currentSlide(2)">
+							<div id="sketchbook-2" class="project" style="background-image: url(images/img-2.jpg);" onclick="openModal();currentSlide(2)">
 								<div class="desc">
 									<div class="con">
 										<h3><a href="work.html">Gesture Drawing</a></h3>
@@ -301,41 +311,41 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							</div>
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-							<div class="project" style="background-image: url(images/img_bg_1.jpg);" onclick="openModal();currentSlide(3)">
+							<div id="sketchbook-3" class="project" style="background-image: url(images/figure3.jpg);" onclick="openModal();currentSlide(3)">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Digital Illustration</a></h3>
-										<span>iPad (Procreate)</span>
+										<h3><a href="work.html">Gesture Drawing</a></h3>
+										<span>2-3 min</span>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-							<div class="project" style="background-image: url(images/img_bg_2.jpg);" onclick="openModal();currentSlide(4)">
+							<div id="sketchbook-4" class="project" style="background-image: url(images/figure4.jpg);" onclick="openModal();currentSlide(4)">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Digital Illustration</a></h3>
-										<span>iPad (Procreate)</span>
+										<h3><a href="work.html">Gesture Drawing</a></h3>
+										<span>30s-1 min</span>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/img-5.jpg);" onclick="openModal();currentSlide(5)">
+							<div id="sketchbook-5" class="project" style="background-image: url(images/figure5.jpg);" onclick="openModal();currentSlide(5)">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Digital Illustration</a></h3>
-										<span>iPad (Procreate)</span>
+										<h3><a href="work.html">Gesture Drawing (Costumed)</a></h3>
+										<span>5 min</span>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="project" style="background-image: url(images/manic.jpg);" onclick="openModal();currentSlide(6)">
+							<div id="sketchbook-6" class="project" style="background-image: url(images/figure6.jpg);" onclick="openModal();currentSlide(6)">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Digital Illustration</a></h3>
-										<span>iPad (Procreate)</span>
+										<h3><a href="work.html">Gesture Drawing (Costumed)</a></h3>
+										<span>5 min</span>
 									</div>
 								</div>
 							</div>
@@ -348,33 +358,33 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					  <div class="modal-content">
 
 					    <div class="mySlides">
-					      <div class="numbertext">1 / 4</div>
+					      <div class="numbertext">1 / 6</div>
 					      <img src="images/img-1.jpg" style="width:100%; height: 100%;">
 					    </div>
 
 					    <div class="mySlides">
-					      <div class="numbertext">2 / 4</div>
+					      <div class="numbertext">2 / 6</div>
 					      <img src="images/img-2.jpg" style="width:100%">
 					    </div>
 
 					    <div class="mySlides">
-					      <div class="numbertext">3 / 4</div>
-					      <img src="images/img_bg_1.jpg" style="width:100%">
+					      <div class="numbertext">3 / 6</div>
+					      <img src="images/figure3.jpg" style="width:100%">
 					    </div>
 
 					    <div class="mySlides">
-					      <div class="numbertext">4 / 4</div>
-					      <img src="images/img_bg_2.jpg" style="width:100%">
+					      <div class="numbertext">4 / 6</div>
+					      <img src="images/figure4.jpg" style="width:100%">
 					    </div>
 
 					    <div class="mySlides">
-					      <div class="numbertext">5 / 4</div>
-					      <img src="images/img-5.jpg" style="width:100%">
+					      <div class="numbertext">5 / 6</div>
+					      <img src="images/figure5.jpg" style="width:100%">
 					    </div>
 
 					    <div class="mySlides">
-					      <div class="numbertext">6 / 4</div>
-					      <img src="images/manic.jpg" style="width:100%; height: 50%;">
+					      <div class="numbertext">6 / 6</div>
+					      <img src="images/figure6.jpg" style="width:100%">
 					    </div>
 
 					    <!-- Next/previous controls -->
@@ -394,7 +404,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 					<div class="row">
 						<div class="col-md-12 animate-box">
-							<p><a href="arts/index.html" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
+							<p><a href="arts/index.html" class="btn btn-primary btn-lg btn-load-more">Link to old archive</i></a></p>
+							<!--<p><a href="arts/index.html" class="btn btn-primary btn-lg btn-load-more">Link to old archive <i class="icon-reload"></i></a></p>-->
 						</div>
 					</div>
 				</div>
@@ -808,7 +819,7 @@ END EDUCATION SECTION-->
 									<i class="icon-map"></i>
 								</div>
 								<div class="colorlib-text">
-									<p>LEGALAND都立大学 
+									<p>都立大学 
 									<br>東京都目黒区平町1丁目25-14</p>
 								</div>
 							</div>

@@ -6,6 +6,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
+	text-align: center;
 }
 html { 
 	/*background: url(images/3.jpg) no-repeat center center fixed; */
@@ -42,14 +43,14 @@ ul {
 }
 
 
-.main {
+/*.main {
 	margin-left: 10%;
 	display: inline-block;
 	position: absolute;
 	float: left;
 	top: 0;
 	font-family: 'Playfair Display', serif;
-}
+}*/
 
 .entry {
 	margin: 20px;
@@ -96,7 +97,7 @@ ul {
 #photos {
   opacity: .88;
   clear:both; 
-  margin-top: 500px;
+  margin-top: 75px;
   margin-bottom: 500px;
 }
 
