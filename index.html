@@ -110,7 +110,9 @@
 			alert("This doesn't work yet. \nTODO(cherrie): fix this link, hook up with jquery lightbox plugin");
 		}
 		function expandSect(){
-			alert("Nothing to expand yet! \nTODO(cherrie): add storyboards panel carousel here");
+			//alert("Nothing to expand yet! \nTODO(cherrie): add storyboards panel carousel here");
+			var hamiltonSlide = document.getElementById("hw8-board");
+			hamiltonSlide.style.display = "inline";
 		}
 	</script>
 	<!-- FOR IE9 below -->
@@ -278,9 +280,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							</div>
 						</div>
 					</div>
+					<iframe id = "hw8-board" style="align-content: center; display: none;" src="https://drive.google.com/file/d/1lTBbGZNk02BzGxG-L15-AX8qywtbr-op/preview" width="640" height="480"></iframe>
 					<div class="row">
 						<div class="col-md-12 animate-box">
-							<p><a href="#" onclick="expandSect();" class="btn btn-primary btn-lg btn-load-more">Expand section </a></p>
+							<p><a onclick="expandSect();" class="btn btn-primary btn-lg btn-load-more">Expand section </a></p>
 							<!-- add this back in if you want loader icon <i class="icon-reload"></i>-->
 						</div>
 					</div>
